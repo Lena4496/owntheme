@@ -33,13 +33,13 @@ function owntheme_title_separator(){ // change the separator
 
 };
 
-function owntheme_document_title_parts($title){
+// function owntheme_document_title_parts($title){
     // var_dump($title); die();
-    unset($title['tagline']); // remove tagline of title, and return title passed by filter created
-    $title[] = 'Ajout'; // after remove the default tagline, put what u want -
-    return $title;
+    // unset($title['tagline']); // remove tagline of title, and return title passed by filter created
+    // $title[] = 'Ajout'; // after remove the default tagline, put what u want -
+//     return $title;
 
-};
+// };
 
 
 //! Actions - HOOKS !// //! Filters = like hook but need a value for altering - qd appliquer tout les filtres, recup val modif !//
@@ -56,4 +56,4 @@ add_action('after_setup_theme', 'owntheme_supports' ); //App\owntheme
 add_action('wp_enqueue_scripts', 'owntheme_register_assets'); // with wp register -> wp_enqueue = loaded when script and style are waiting
 // add_filter('wp_title','owntheme_title');
 add_filter('document_title_separator','owntheme_title_separator');
-add_filter('document_title_parts', 'owntheme_document_title_parts'); // register the hook (function owntheme) so add filter first param' is where u want to connect, second param' is the name of the function that u have created'
+// add_filter('document_title_parts', 'owntheme_document_title_parts'); // register the hook (function owntheme) so add filter first param' is where u want to connect, second param' is the name of the function that u have created'
