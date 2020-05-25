@@ -4,3 +4,15 @@ Theme Name: Owntheme
 
 
 */
+
+.card-title{
+    text-align: center;
+    color: red;
+
+
+}
+
+
+*{
+    color:yellow;
+}
