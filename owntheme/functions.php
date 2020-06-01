@@ -13,14 +13,18 @@ function owntheme_supports (){
 // wp_register_Style function who permitted to register styles (firstparametter = handle = unique name/ 2param = source)
 
 function owntheme_register_assets(){ 
-    // wp_register_style('css', 'wp-content\themes\owntheme\style.css', []);
+    wp_register_style('style', get_stylesheet_uri());
     wp_register_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',[]);
     wp_register_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', ['popper', 'jquery'], false, true);
     wp_register_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', [], null, true);
     wp_deregister_script('jquery'); // dont register jquery anymore, for delete wp jquery and replace by our 
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', [], false, true);
+ 
+    wp_enqueue_style('style');
     wp_enqueue_style('bootstrap');// add style in list
     wp_enqueue_script('bootstrap');
+  
+    
 }
 
 
